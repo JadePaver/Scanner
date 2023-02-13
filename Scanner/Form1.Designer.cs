@@ -1,6 +1,6 @@
 ﻿namespace Scanner
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,23 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Date = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.LTimeOutAM = new System.Windows.Forms.Label();
+            this.LTimeInAM = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Test = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.LTimeOutPM = new System.Windows.Forms.Label();
+            this.LTimeInPM = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -53,7 +55,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Time = new System.Windows.Forms.Label();
+            this.TimeDate = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -65,47 +68,49 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.PowderBlue;
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.FlatAppearance.BorderSize = 2;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(625, 45);
+            this.button1.Location = new System.Drawing.Point(634, 45);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 30);
+            this.button1.Size = new System.Drawing.Size(115, 30);
             this.button1.TabIndex = 0;
             this.button1.Text = "LOGIN";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.PowderBlue;
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.button2.FlatAppearance.BorderSize = 2;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(625, 79);
+            this.button2.Location = new System.Drawing.Point(633, 79);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(137, 30);
+            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button2.Size = new System.Drawing.Size(116, 30);
             this.button2.TabIndex = 1;
             this.button2.Text = "REGISTER";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label1
+            // Date
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(14, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(249, 35);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "FEBRUARY 3, 2023";
+            this.Date.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Date.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Date.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Date.Location = new System.Drawing.Point(14, 9);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(249, 35);
+            this.Date.TabIndex = 2;
+            this.Date.Text = "FEBRUARY 3, 2023";
             // 
             // groupBox1
             // 
@@ -143,7 +148,7 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Roxell Marie T. Abellar";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.label5.Click += new System.EventHandler(this.Label5_Click);
             // 
             // label4
             // 
@@ -167,29 +172,27 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Name:";
             // 
-            // label10
+            // LTimeOutAM
             // 
-            this.label10.BackColor = System.Drawing.SystemColors.Control;
-            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(135, 64);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(122, 29);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "12:01";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LTimeOutAM.BackColor = System.Drawing.SystemColors.Control;
+            this.LTimeOutAM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LTimeOutAM.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LTimeOutAM.Location = new System.Drawing.Point(135, 64);
+            this.LTimeOutAM.Name = "LTimeOutAM";
+            this.LTimeOutAM.Size = new System.Drawing.Size(122, 29);
+            this.LTimeOutAM.TabIndex = 11;
+            this.LTimeOutAM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label9
+            // LTimeInAM
             // 
-            this.label9.BackColor = System.Drawing.SystemColors.Control;
-            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(6, 64);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(122, 29);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "7:56";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LTimeInAM.BackColor = System.Drawing.SystemColors.Control;
+            this.LTimeInAM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LTimeInAM.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LTimeInAM.Location = new System.Drawing.Point(6, 64);
+            this.LTimeInAM.Name = "LTimeInAM";
+            this.LTimeInAM.Size = new System.Drawing.Size(122, 29);
+            this.LTimeInAM.TabIndex = 10;
+            this.LTimeInAM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
@@ -217,6 +220,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.Test);
             this.groupBox2.Controls.Add(this.groupBox5);
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.pictureBox1);
@@ -231,16 +235,27 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
+            // Test
+            // 
+            this.Test.BackColor = System.Drawing.Color.LimeGreen;
+            this.Test.Location = new System.Drawing.Point(385, 13);
+            this.Test.Name = "Test";
+            this.Test.Size = new System.Drawing.Size(68, 26);
+            this.Test.TabIndex = 9;
+            this.Test.Text = "Test";
+            this.Test.UseVisualStyleBackColor = false;
+            this.Test.Click += new System.EventHandler(this.Test_Click);
+            // 
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox5.Controls.Add(this.label11);
-            this.groupBox5.Controls.Add(this.label12);
-            this.groupBox5.Controls.Add(this.label13);
+            this.groupBox5.Controls.Add(this.LTimeOutPM);
+            this.groupBox5.Controls.Add(this.LTimeInPM);
             this.groupBox5.Controls.Add(this.label14);
             this.groupBox5.Controls.Add(this.label7);
-            this.groupBox5.Controls.Add(this.label10);
-            this.groupBox5.Controls.Add(this.label9);
+            this.groupBox5.Controls.Add(this.LTimeOutAM);
+            this.groupBox5.Controls.Add(this.LTimeInAM);
             this.groupBox5.Controls.Add(this.label8);
             this.groupBox5.Controls.Add(this.label15);
             this.groupBox5.Controls.Add(this.label16);
@@ -262,29 +277,27 @@
             this.label11.Text = " Time IN";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label12
+            // LTimeOutPM
             // 
-            this.label12.BackColor = System.Drawing.SystemColors.Control;
-            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(426, 64);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(122, 29);
-            this.label12.TabIndex = 15;
-            this.label12.Text = "5:16";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LTimeOutPM.BackColor = System.Drawing.SystemColors.Control;
+            this.LTimeOutPM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LTimeOutPM.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LTimeOutPM.Location = new System.Drawing.Point(426, 64);
+            this.LTimeOutPM.Name = "LTimeOutPM";
+            this.LTimeOutPM.Size = new System.Drawing.Size(122, 29);
+            this.LTimeOutPM.TabIndex = 15;
+            this.LTimeOutPM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label13
+            // LTimeInPM
             // 
-            this.label13.BackColor = System.Drawing.SystemColors.Control;
-            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(297, 64);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(122, 29);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "1:00";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LTimeInPM.BackColor = System.Drawing.SystemColors.Control;
+            this.LTimeInPM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LTimeInPM.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LTimeInPM.Location = new System.Drawing.Point(297, 64);
+            this.LTimeInPM.Name = "LTimeInPM";
+            this.LTimeInPM.Size = new System.Drawing.Size(122, 29);
+            this.LTimeInPM.TabIndex = 14;
+            this.LTimeInPM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label14
             // 
@@ -360,8 +373,8 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.label1);
+            this.groupBox3.Controls.Add(this.Time);
+            this.groupBox3.Controls.Add(this.Date);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox3.Location = new System.Drawing.Point(14, 306);
             this.groupBox3.Name = "groupBox3";
@@ -369,18 +382,25 @@
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             // 
-            // label2
+            // Time
             // 
-            this.label2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 43F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(309, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(280, 92);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "10:10 AM";
+            this.Time.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Time.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Time.Font = new System.Drawing.Font("Segoe UI", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Time.Location = new System.Drawing.Point(309, 9);
+            this.Time.Name = "Time";
+            this.Time.Size = new System.Drawing.Size(280, 92);
+            this.Time.TabIndex = 3;
+            this.Time.Text = "10:10 AM";
+            this.Time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Form1
+            // TimeDate
+            // 
+            this.TimeDate.Enabled = true;
+            this.TimeDate.Interval = 1000;
+            this.TimeDate.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -388,7 +408,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox2);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Name = "Form1";
+            this.Name = "Main";
             this.Text = "MAIN";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
@@ -407,7 +427,7 @@
 
         private Button button1;
         private Button button2;
-        private Label label1;
+        private Label Date;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private GroupBox groupBox3;
@@ -415,9 +435,9 @@
         private GroupBox groupBox4;
         private Label label;
         private PictureBox pictureBox2;
-        private Label label2;
-        private Label label10;
-        private Label label9;
+        private Label Time;
+        private Label LTimeOutAM;
+        private Label LTimeInAM;
         private Label label8;
         private Label label7;
         private Label label6;
@@ -426,10 +446,12 @@
         private Label label3;
         private GroupBox groupBox5;
         private Label label11;
-        private Label label12;
-        private Label label13;
+        private Label LTimeOutPM;
+        private Label LTimeInPM;
         private Label label14;
         private Label label15;
         private Label label16;
+        public System.Windows.Forms.Timer TimeDate;
+        private Button Test;
     }
 }

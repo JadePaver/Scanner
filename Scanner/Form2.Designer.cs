@@ -28,66 +28,94 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            this.Show = new System.Windows.Forms.Button();
+            this.Hide = new System.Windows.Forms.Button();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.Login = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // Show
             // 
-            this.button1.Location = new System.Drawing.Point(211, 188);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(76, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Enter";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Show.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Show.BackgroundImage")));
+            this.Show.Location = new System.Drawing.Point(293, 80);
+            this.Show.Name = "Show";
+            this.Show.Size = new System.Drawing.Size(25, 25);
+            this.Show.TabIndex = 0;
+            this.Show.UseVisualStyleBackColor = true;
+            this.Show.Click += new System.EventHandler(this.Show_Click_1);
+            // 
+            // Hide
+            // 
+            this.Hide.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Hide.BackgroundImage")));
+            this.Hide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Hide.Location = new System.Drawing.Point(292, 80);
+            this.Hide.Name = "Hide";
+            this.Hide.Size = new System.Drawing.Size(25, 25);
+            this.Hide.TabIndex = 1;
+            this.Hide.UseVisualStyleBackColor = true;
+            this.Hide.Click += new System.EventHandler(this.Hide_Click);
+            // 
+            // txtUser
+            // 
+            this.txtUser.Location = new System.Drawing.Point(158, 51);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(128, 23);
+            this.txtUser.TabIndex = 2;
+            // 
+            // txtPass
+            // 
+            this.txtPass.Location = new System.Drawing.Point(158, 80);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(128, 23);
+            this.txtPass.TabIndex = 3;
+            this.txtPass.UseSystemPasswordChar = true;
+            // 
+            // Login
+            // 
+            this.Login.Location = new System.Drawing.Point(204, 147);
+            this.Login.Name = "Login";
+            this.Login.Size = new System.Drawing.Size(82, 25);
+            this.Login.TabIndex = 4;
+            this.Login.Text = "Enter";
+            this.Login.UseVisualStyleBackColor = true;
+            this.Login.Click += new System.EventHandler(this.Login_Click);
             // 
             // label1
             // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(32, 32);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(86, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 26);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Username:";
+            this.label1.Size = new System.Drawing.Size(66, 15);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Username: ";
             // 
             // label2
             // 
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Location = new System.Drawing.Point(32, 81);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(86, 83);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 26);
-            this.label2.TabIndex = 2;
+            this.label2.Size = new System.Drawing.Size(63, 15);
+            this.label2.TabIndex = 6;
             this.label2.Text = "Password: ";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(123, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(208, 23);
-            this.textBox1.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(123, 82);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(208, 23);
-            this.textBox2.TabIndex = 4;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 240);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(433, 215);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Login);
+            this.Controls.Add(this.txtPass);
+            this.Controls.Add(this.txtUser);
+            this.Controls.Add(this.Show);
+            this.Controls.Add(this.Hide);
             this.Name = "Form2";
-            this.Padding = new System.Windows.Forms.Padding(30, 20, 0, 0);
+            this.Padding = new System.Windows.Forms.Padding(30, 20, 30, 30);
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
@@ -98,9 +126,15 @@
         #endregion
 
         private Button button1;
-        private Label label1;
-        private Label label2;
-        private TextBox textBox1;
+        private Button button2;
+        private TextBox txtUser;
         private TextBox textBox2;
+        private Button Login;
+        private Label label1;
+        private Button Show;
+        private Button Hide;
+        private Label label2;
+        private TextBox txtPass;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }
